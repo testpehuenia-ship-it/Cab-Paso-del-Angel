@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complejo de Cabañas de Alta Gama y Spa en Villa Pehuenia. Reserva directa con beneficios exclusivos.">
+    <title>Cabañas de Alta Gama y Spa en Villa Pehuenia | El Paso del Ángel</title>
+    
+    <!-- Google Fonts: Manrope (Headings) & Inter (Body) to match Alpha Architect Design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <!-- SEO Schema: Hotel & LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "El Paso del Ángel",
+      "image": "assets/images/hero.webp",
+      "description": "Cabañas de Alta Gama y Spa en Villa Pehuenia frente al Lago Aluminé.",
+      "starRating": {"@type": "Rating", "ratingValue": "5"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ruta Provincial 11, Km 5",
+        "addressLocality": "Villa Pehuenia",
+        "addressRegion": "Neuquén",
+        "postalCode": "8345",
+        "addressCountry": "AR"
+      },
+      "telephone": "+54 9 2942 000000",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- 1. Header (Sticky) -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <div class="logo">El Paso del Ángel</div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="cabanas.html">Cabañas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="ubicacion.html">Ubicación</a>
+            </nav>
+            <div class="nav-actions">
+                <select class="lang-selector">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+                <a href="reserva.html" class="btn-primary">Reservar</a>
+            </div>
+            <div class="mobile-menuBtn">☰</div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div id="canvas-container" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;"></div>
+            <img src="assets/images/hero.webp" alt="El Paso del Ángel Villa Pehuenia" style="z-index: 0; position: relative;">
+        </div>
+        <div class="container hero-content">
+            <h1 class="fade-in">Cabañas de Alta Gama y Spa en Villa Pehuenia</h1>
+            <p class="fade-in delay-1">Siente la inmensidad de la Patagonia desde tu refugio privado.</p>
+        </div>
+        
+        <!-- Booking Widget Glassmorphism -->
+        <div class="booking-widget wrapper glassmorphism fade-in delay-2" id="reserva">
+            <div class="booking-inputs">
+                <div class="input-group">
+                    <label>Llegada</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Salida</label>
+                    <input type="date">
+                </div>
+                <div class="input-group">
+                    <label>Huéspedes</label>
+                    <select>
+                        <option>2 Personas</option>
+                        <option>4 Personas</option>
+                        <option>Familia</option>
+                    </select>
+                </div>
+                <a href="reserva.html" class="btn-primary large" style="text-align: center;">Consultar Disponibilidad</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Propuesta de Valor -->
+    <section class="uvp-section">
+        <div class="container uvp-grid">
+            <div class="uvp-item">
+                <div class="icon">🌊</div>
+                <h3>Privilegio Frente al Lago</h3>
+                <p>Acceso directo a las aguas cristalinas del Aluminé.</p>
+            </div>
+            <div class="uvp-item">
+                <div class="icon">🌿</div>
+                <h3>Spa Exclusivo</h3>
+                <p>Sesiones de relajación con vistas al bosque eterno.</p>
+            </div>
+            <div class="uvp-item">
+                <div class="icon">🛎️</div>
+                <h3>Atención Personalizada</h3>
+                <p>Tu concierge digital para cada necesidad del viaje.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Habitaciones -->
+    <section class="cabanas-section" id="cabanas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tu Alojamiento Familiar o en Pareja en La Patagonia</h2>
+                <p>Diseño orgánico y comodidades de hotel boutique para no querer salir jamás.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card cabana-card">
+                    <img src="assets/images/cabin1.webp" alt="Cabaña Suite con Jacuzzi">
+                    <div class="card-content">
+                        <h3>Suite Premium con Jacuzzi</h3>
+                        <ul class="features">
+                            <li>✓ Vista panorámica al lago</li>
+                            <li>✓ Losa radiante y hogar a leña</li>
+                            <li>✓ Jacuzzi interior hidromasaje</li>
+                        </ul>
+                        <a href="cabanas.html" class="btn-secondary" style="text-align: center;">Ver Tarifas Directas</a>
+                    </div>
+                </div>
+                <div class="card cabana-card">
+                    <img src="assets/images/cabin1.webp" alt="Cabaña Familiar">
+                    <div class="card-content">
+                        <h3>Cabaña Familiar del Bosque</h3>
+                        <ul class="features">
+                            <li>✓ Capacidad 4 a 6 personas</li>
+                            <li>✓ Cocina completa equipada</li>
+                            <li>✓ Deck y parrilla privada</li>
+                        </ul>
+                        <a href="cabanas.html" class="btn-secondary" style="text-align: center;">Ver Tarifas Directas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Módulo Lead Magnet (Upper Funnel SEO) -->
+    <section class="lead-magnet" style="background-image: linear-gradient(rgba(26, 47, 35, 0.8), rgba(26, 47, 35, 0.9)), url('assets/images/winter.webp');">
+        <div class="container lm-content">
+            <h2>¿Primera vez en Pehuenia?</h2>
+            <p>Descarga gratis nuestra guía exclusiva con mapas, secretos del Batea Mahuida y lugares donde come la gente local.</p>
+            <form class="lm-form" action="guia.html">
+                <input type="email" placeholder="Tu mejor correo" required>
+                <button type="submit" class="btn-primary">Obtener Guía en PDF</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. Hub de Contenidos & Guías (SEO Ecosistema) -->
+    <section class="blog-section" id="experiencias">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experiencias Inolvidables: Qué Hacer en Villa Pehuenia</h2>
+            </div>
+            
+            <div class="card-grid asymetric-grid">
+                <div class="card blog-card">
+                    <img src="assets/images/winter.webp" alt="Esquí en Invierno">
+                    <div class="card-content">
+                        <span class="tag">❄️ Nieve</span>
+                        <h3>Esquí y raquetas en el Batea Mahuida</h3>
+                        <p>Descubre el parque de nieve administrado por la comunidad Mapuche Puel.</p>
+                        <a href="experiencias.html" class="inline-link">Vive esta experiencia quedándote con nosotros ➔</a>
+                    </div>
+                </div>
+                
+                <div class="card blog-card">
+                    <img src="assets/images/gastronomy.webp" alt="Ruta del Piñón">
+                    <div class="card-content">
+                        <span class="tag">🍷 Gastronomía</span>
+                        <h3>La ruta sagrada del Piñón (Araucaria)</h3>
+                        <p>Un recorrido por los mejores platos de autor utilizando el fruto milenario.</p>
+                        <a href="experiencias.html" class="inline-link">Vive esta experiencia quedándote con nosotros ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Prueba Social -->
+    <section class="reviews-section">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 2rem;">Lo que dicen nuestros huéspedes</h2>
+            <div class="reviews-container">
+                <div class="review-card glass-dark">
+                    <div class="stars">★★★★★</div>
+                    <p>"Reservar desde su web fue súper fácil y además nos dieron una botella de vino local por reservar directo. La cabaña y la vista, un 10."</p>
+                    <span class="author">- Martín (vía Google)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer Estratégico -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col brand">
+                <h3>El Paso del Ángel</h3>
+                <p>Tu refugio de alta gama en la Patagonia Argentina.</p>
+                <div class="ssl-badge">🔒 SSL Seguro | Garantía de Mejor Tarifa</div>
+            </div>
+            
+            <div class="footer-col links">
+                <h4>Enlaces SEO</h4>
+                <a href="guia.html">Guía Batea Mahuida</a>
+                <a href="experiencias.html">Gastronomía en Pehuenia</a>
+                <a href="politicas.html">Políticas de Reserva</a>
+            </div>
+            
+            <div class="footer-col contact">
+                <h4>Contacto (NAP)</h4>
+                <p>📍 Ruta Provincial 11, Km 5, Villa Pehuenia, Neuquén</p>
+                <p>📱 +54 9 2942 000000</p>
+                <p>📩 reservas@pasodelangel.com</p>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            © 2026 Cabañas El Paso del Ángel. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- 8. Accesos Rápidos (WhatsApp Sticky) -->
+    <a href="https://wa.me/5492942000000?text=Hola,%20quisiera%20información%20sobre%20las%20cabañas" class="whatsapp-btn" target="_blank" aria-label="Chat WhatsApp">
+        <svg fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
