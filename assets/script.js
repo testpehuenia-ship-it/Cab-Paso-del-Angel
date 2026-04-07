@@ -12,23 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Simple Mobile Menu toggle
     const mobileBtn = document.querySelector('.mobile-menuBtn');
-    const navLinks = document.querySelector('.nav-links');
-    const navActions = document.querySelector('.nav-actions');
 
-    mobileBtn.addEventListener('click', () => {
-        const isVisible = navLinks.style.display === 'flex';
-        navLinks.style.display = isVisible ? 'none' : 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = 'var(--primary)';
-        navLinks.style.padding = '20px';
-        
-        navActions.style.display = isVisible ? 'none' : 'flex';
-        navActions.style.flexDirection = 'column';
-    });
+    if (mobileBtn && navbar) {
+        mobileBtn.addEventListener('click', () => {
+            navbar.classList.toggle('menu-open');
+        });
+    }
 
     // 3. 3D Web Experience (Three.js + GSAP ScrollTrigger)
     const canvasContainer = document.getElementById('canvas-container');
