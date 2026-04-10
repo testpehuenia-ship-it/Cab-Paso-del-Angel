@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="assets/styles.css">
 
     <!-- SEO Schema: Hotel & LocalBusiness -->
@@ -64,35 +64,37 @@
 
     <!-- 2. Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg">
-            <div id="canvas-container" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;"></div>
-            <img src="assets/images/hero.webp" alt="El Paso del Ángel Villa Pehuenia" style="z-index: 0; position: relative;">
+        <div class="hero-bg" id="hero-slider">
         </div>
         <div class="container hero-content">
-            <h1 class="fade-in">Cabañas de Alta Gama y Spa en Villa Pehuenia</h1>
-            <p class="fade-in delay-1">Siente la inmensidad de la Patagonia desde tu refugio privado.</p>
+            <h1 class="fade-in" style="position: relative; z-index: 10;">Cabañas de Alta Gama y Spa en Villa Pehuenia</h1>
+            <p class="fade-in delay-1" style="position: relative; z-index: 10;">Siente la inmensidad de la Patagonia desde tu refugio privado.</p>
         </div>
-        
-        <!-- Booking Widget Glassmorphism -->
-        <div class="booking-widget wrapper glassmorphism fade-in delay-2" id="reserva">
-            <div class="booking-inputs">
-                <div class="input-group">
-                    <label>Llegada</label>
-                    <input type="date">
+    </section>
+
+    <!-- Booking Widget moved below Hero -->
+    <section class="booking-section" style="position: relative; z-index: 20; background: var(--surface);">
+        <div class="container">
+            <div class="booking-widget wrapper glassmorphism fade-in delay-2" id="reserva" style="position: relative; margin: 40px auto; box-shadow: var(--shadow-ambient);">
+                <div class="booking-inputs">
+                    <div class="input-group">
+                        <label>Llegada</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Salida</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Huéspedes</label>
+                        <select>
+                            <option>2 Personas</option>
+                            <option>4 Personas</option>
+                            <option>Familia</option>
+                        </select>
+                    </div>
+                    <a href="reserva.html" class="btn-primary large" style="text-align: center;">Consultar Disponibilidad</a>
                 </div>
-                <div class="input-group">
-                    <label>Salida</label>
-                    <input type="date">
-                </div>
-                <div class="input-group">
-                    <label>Huéspedes</label>
-                    <select>
-                        <option>2 Personas</option>
-                        <option>4 Personas</option>
-                        <option>Familia</option>
-                    </select>
-                </div>
-                <a href="reserva.html" class="btn-primary large" style="text-align: center;">Consultar Disponibilidad</a>
             </div>
         </div>
     </section>
@@ -101,17 +103,17 @@
     <section class="uvp-section">
         <div class="container uvp-grid">
             <div class="uvp-item">
-                <div class="icon">🌊</div>
+                <div class="icon" style="color: var(--accent);"><i class="ph ph-waves" style="font-size: 3rem;"></i></div>
                 <h3>Privilegio Frente al Lago</h3>
                 <p>Acceso directo a las aguas cristalinas del Aluminé.</p>
             </div>
             <div class="uvp-item">
-                <div class="icon">🌿</div>
+                <div class="icon" style="color: var(--accent);"><i class="ph ph-plant" style="font-size: 3rem;"></i></div>
                 <h3>Spa Exclusivo</h3>
                 <p>Sesiones de relajación con vistas al bosque eterno.</p>
             </div>
             <div class="uvp-item">
-                <div class="icon">🛎️</div>
+                <div class="icon" style="color: var(--accent);"><i class="ph ph-bell-ringing" style="font-size: 3rem;"></i></div>
                 <h3>Atención Personalizada</h3>
                 <p>Tu concierge digital para cada necesidad del viaje.</p>
             </div>
@@ -192,6 +194,26 @@
                         <h3>La ruta sagrada del Piñón (Araucaria)</h3>
                         <p>Un recorrido por los mejores platos de autor utilizando el fruto milenario.</p>
                         <a href="experiencias.html" class="inline-link">Vive esta experiencia quedándote con nosotros ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.b Galería de Imágenes de Clientes (Circular 3D) -->
+    <section class="gallery-section" id="galeria-clientes">
+        <!-- Contenedor alto para permitir scroll -->
+        <div class="gallery-scroll-container">
+            <!-- Contenedor fijo a la pantalla -->
+            <div class="gallery-sticky">
+                <div class="gallery-header">
+                    <h2>Galería de Huéspedes</h2>
+                    <p>Haz scroll para rotar la galería y descubrir sus experiencias</p>
+                </div>
+                
+                <div class="circular-gallery">
+                    <div class="gallery-pivot" id="circular-pivot">
+                        <!-- Las tarjetas se inyectan por JS -->
                     </div>
                 </div>
             </div>

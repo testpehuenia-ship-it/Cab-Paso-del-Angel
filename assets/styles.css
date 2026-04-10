@@ -82,7 +82,10 @@ button, .btn-primary, .btn-secondary {
   padding: 12px 28px;
 }
 .btn-secondary:hover {
-  background: #E1E3E2;
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(26, 47, 35, 0.15);
 }
 
 /* 1. HEADER (Lujo orgánico, Glass a Sólido) */
@@ -463,6 +466,103 @@ footer {
   height: 32px;
 }
 
+/* 10. CABANAS DETAIL PAGE */
+.cabana-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 60px;
+  align-items: center;
+}
+.cabana-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-ambient);
+  object-fit: cover;
+  height: 100%;
+  max-height: 550px;
+}
+.cabana-info {
+  text-align: left;
+}
+.cabana-info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+.cabana-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+.services-title {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  color: var(--primary);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  list-style: none;
+}
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.services-list li i {
+  font-size: 24px;
+  color: var(--accent);
+}
+
+/* COMPLEX SERVICES */
+.complex-services {
+  margin-top: 80px;
+  padding: 60px 40px;
+  text-align: center;
+}
+.complex-services h3 {
+  font-size: 2rem;
+  margin-bottom: 48px;
+}
+.complex-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.c-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.c-item .icon-wrap {
+  width: 80px;
+  height: 80px;
+  background: var(--surface-low);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.c-item:hover .icon-wrap {
+  transform: translateY(-5px);
+}
+.c-item i {
+  font-size: 36px;
+  color: var(--accent);
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero { flex-direction: column; justify-content: center; }
@@ -478,6 +578,9 @@ footer {
     flex-direction: column;
     align-items: stretch;
   }
+  .cabana-detail { grid-template-columns: 1fr; }
+  .cabana-image img { max-height: 400px; }
+  .complex-grid { gap: 32px; flex-direction: column; }
 }
 
 @media (max-width: 768px) {
@@ -520,6 +623,8 @@ footer {
   .uvp-section, .cabanas-section, .blog-section { padding: 60px 0; }
   .footer-col { text-align: center; }
   .navbar { padding: 16px 0; }
+  .services-list { grid-template-columns: 1fr; }
+  .complex-services { padding: 40px 20px; }
 }
 
 /* Micro Animaciones */
@@ -535,5 +640,111 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 11. CIRCULAR GALLERY 3D */
+.gallery-section {
+  background: var(--primary); /* El verde protagonista de tu página */
+}
+.gallery-scroll-container {
+  /* Height is tall to let the user scroll down and rotate */
+  height: 250vh;
+  position: relative;
+}
+.gallery-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-header {
+  position: absolute;
+  top: 15%;
+  z-index: 10;
+  text-align: center;
+}
+.gallery-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.gallery-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.circular-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2000px;
+}
+.gallery-pivot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.gallery-item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px; 
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  transition: opacity 0.3s linear;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  color: #fff;
+  z-index: 2;
+}
+.gallery-item-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.gallery-item-content p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+.gallery-item-content span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 260px;
+    height: 360px;
+    margin-left: -130px;
+    margin-top: -100px;
   }
 }

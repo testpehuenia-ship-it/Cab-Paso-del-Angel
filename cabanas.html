@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -31,13 +32,53 @@
     </header>
 
     <section class="blog-section" style="padding-top: 140px; min-height: 60vh;">
-        <div class="container text-center">
-            <h2>Nuestras Cabañas</h2>
-            <p style="margin-top:20px; font-size:1.1rem; color:var(--text-muted);">
-                Descubre en detalle nuestras comodidades: metraje cuadrado, inventario de la cocina, tipo de calefacción y vistas exactas del lago.
+        <div class="container">
+            <h2 class="text-center">Nuestras Cabañas Premium</h2>
+            <p class="text-center" style="margin-top:20px; font-size:1.1rem; color:var(--text-muted); max-width:800px; margin-inline:auto;">
+                Descubre en detalle nuestras comodidades: diseño orgánico, máxima privacidad y equipamiento de hotel boutique para no querer salir jamás de tu refugio.
             </p>
-            <div style="margin-top: 40px;">
-                <img src="assets/images/cabin1.webp" alt="Cabana" style="border-radius:var(--radius-lg); max-width:800px; width:100%; box-shadow:var(--shadow-ambient);">
+            
+            <div class="cabana-detail">
+                <div class="cabana-image">
+                    <img src="assets/images/cabin1.webp" alt="Cabaña Suite con Jacuzzi">
+                </div>
+                <div class="cabana-info">
+                    <h3>Suite Frente al Lago</h3>
+                    <p class="cabana-desc">Diseñada para ofrecer un refugio íntimo e irrepetible. Con detalles en madera de lenga y grandes ventanales inmersivos, cada suite conecta de inmediato con la energía de la Patagonia.</p>
+                    
+                    <h4 class="services-title">Equipamiento y Servicios</h4>
+                    <ul class="services-list">
+                        <li><i class="ph ph-bed"></i> Cama King con sábanas ecológicas</li>
+                        <li><i class="ph ph-bathtub"></i> Jacuzzi interior hidromasaje</li>
+                        <li><i class="ph ph-fire"></i> Hogar a leña tradicional</li>
+                        <li><i class="ph ph-thermometer-hot"></i> Losa radiante automatizada</li>
+                        <li><i class="ph ph-cooking-pot"></i> Cocina totalmente equipada</li>
+                        <li><i class="ph ph-wifi-high"></i> Wi-Fi Satelital de alta velocidad</li>
+                        <li><i class="ph ph-coffee"></i> Cafetera multicápsulas</li>
+                        <li><i class="ph ph-television"></i> Smart TV 55" con streaming</li>
+                        <li><i class="ph ph-wine"></i> Cava con vinos locales</li>
+                        <li><i class="ph ph-sparkle"></i> Servicio de limpieza y amenities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Nuevo bloque del complejo -->
+            <div class="complex-services glassmorphism">
+                <h3>Áreas Exclusivas del Complejo</h3>
+                <div class="complex-grid">
+                    <div class="c-item">
+                        <div class="icon-wrap"><i class="ph ph-barbell"></i></div>
+                        <span>Gimnasio de Última Generación</span>
+                    </div>
+                    <div class="c-item">
+                        <div class="icon-wrap"><i class="ph ph-waves"></i></div>
+                        <span>Pileta In/Out Climatizada</span>
+                    </div>
+                    <div class="c-item">
+                        <div class="icon-wrap"><i class="ph ph-game-controller"></i></div>
+                        <span>Sala de Juegos y Ocio</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
