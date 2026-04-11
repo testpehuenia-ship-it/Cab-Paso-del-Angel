@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Complejo de Cabañas de Alta Gama y Spa en Villa Pehuenia. Reserva directa con beneficios exclusivos.">
-    <title>Cabañas de Alta Gama y Spa en Villa Pehuenia | El Paso del Ángel</title>
+    <meta name="description" content="Cabañas de alta gama y Spa en Villa Pehuenia. Alquiler de cabañas frente al Lago Aluminé, Neuquén. Reserva directa con el mejor precio garantizado.">
+    <title>Cabañas en Villa Pehuenia - El Paso del Ángel</title>
+    <link rel="canonical" href="https://elpasodelangel.com.ar/es/">
     
     <!-- Google Fonts: Manrope (Headings) & Inter (Body) to match Alpha Architect Design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +14,20 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="assets/styles.css">
 
-    <!-- SEO Schema: Hotel & LocalBusiness -->
+    <!-- SEO Schema: LodgingBusiness & Reviews -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Hotel",
+      "@type": "LodgingBusiness",
       "name": "El Paso del Ángel",
-      "image": "assets/images/hero.webp",
+      "image": [
+        "https://elpasodelangel.com.ar/assets/images/hero.webp",
+        "https://elpasodelangel.com.ar/assets/images/cabin1.webp"
+      ],
       "description": "Cabañas de Alta Gama y Spa en Villa Pehuenia frente al Lago Aluminé.",
-      "starRating": {"@type": "Rating", "ratingValue": "5"},
+      "url": "https://elpasodelangel.com.ar/es/",
+      "telephone": "+54 9 2942 000000",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Ruta Provincial 11, Km 5",
@@ -30,12 +36,28 @@
         "postalCode": "8345",
         "addressCountry": "AR"
       },
-      "telephone": "+54 9 2942 000000",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "128"
-      }
+        "bestRating": "5",
+        "ratingCount": "128"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Martín"
+          },
+          "datePublished": "2026-02-15",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Reservar desde su web fue súper fácil y además nos dieron una botella de vino local por reservar directo. La cabaña y la vista, un 10."
+        }
+      ]
     }
     </script>
 </head>
@@ -67,8 +89,8 @@
         <div class="hero-bg" id="hero-slider">
         </div>
         <div class="container hero-content">
-            <h1 class="fade-in" style="position: relative; z-index: 10;">Cabañas de Alta Gama y Spa en Villa Pehuenia</h1>
-            <p class="fade-in delay-1" style="position: relative; z-index: 10;">Siente la inmensidad de la Patagonia desde tu refugio privado.</p>
+            <h1 class="fade-in" style="position: relative; z-index: 10;">Cabañas en Villa Pehuenia - El Paso del Ángel</h1>
+            <p class="fade-in delay-1" style="position: relative; z-index: 10;">Siente la inmensidad de la Patagonia desde tu refugio privado frente al lago.</p>
         </div>
     </section>
 
@@ -130,7 +152,7 @@
             
             <div class="card-grid">
                 <div class="card cabana-card">
-                    <img src="assets/images/cabin1.webp" alt="Cabaña Suite con Jacuzzi">
+                    <img src="assets/images/cabin1.webp" alt="Fachada de cabaña El Paso del Angel en Villa Pehuenia, suite con jacuzzi vista al lago">
                     <div class="card-content">
                         <h3>Suite Premium con Jacuzzi</h3>
                         <ul class="features">
@@ -142,7 +164,7 @@
                     </div>
                 </div>
                 <div class="card cabana-card">
-                    <img src="assets/images/cabin1.webp" alt="Cabaña Familiar">
+                    <img src="assets/images/cabin1.webp" alt="Cabaña familiar El Paso del Angel cubierta de nieve en Villa Pehuenia">
                     <div class="card-content">
                         <h3>Cabaña Familiar del Bosque</h3>
                         <ul class="features">
@@ -224,11 +246,16 @@
     <section class="reviews-section">
         <div class="container text-center">
             <h2 style="margin-bottom: 2rem;">Lo que dicen nuestros huéspedes</h2>
-            <div class="reviews-container">
+            
+            <!-- Semantics & Schema integration visible representation -->
+            <div class="reviews-container" itemscope itemtype="https://schema.org/Review">
                 <div class="review-card glass-dark">
-                    <div class="stars">★★★★★</div>
-                    <p>"Reservar desde su web fue súper fácil y además nos dieron una botella de vino local por reservar directo. La cabaña y la vista, un 10."</p>
-                    <span class="author">- Martín (vía Google)</span>
+                    <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5" />
+                        ★★★★★
+                    </div>
+                    <p itemprop="reviewBody">"Reservar desde su web fue súper fácil y además nos dieron una botella de vino local por reservar directo. La cabaña y la vista, un 10."</p>
+                    <span class="author">- <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Martín</span></span> (vía Google)</span>
                 </div>
             </div>
         </div>
